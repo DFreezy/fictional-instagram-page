@@ -1,0 +1,95 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile-top {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.profile-top img {
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+/*.profile-top p {
+    margin: 0;
+    text-align: center;
+    bottom: 5px;
+}*/
+
+/*.profile-top h1 {
+    margin: 0;
+    text-align: center;
+    top: 5px;
+}*/
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Increased gap between images */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Centering the grid */
+}
+
+.images img {
+    width: 100%; /* Ensures each image takes the full width of its grid cell */
+    height: auto; /* Ensures images retain their aspect ratio */
+    object-fit: cover; /* Ensures images cover the grid area if needed */
+    border-radius: 10px; /* Slight rounding of the image corners */
+}
+
+#edit-profile {
+    text-align: center;
+    margin: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #3897f0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stats {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+}
+
+.stats h1{
+margin-bottom: 10px;
+}
+
+.buffer img {
+    animation-name: buffer;
+    border-radius: 100%;
+    animation-duration: 2s; /* Duration of 2 seconds */
+    animation-iteration-count: infinite; /* Keeps the animation looping */
+    animation-timing-function: linear; /* Makes the animation rotate smoothly */
+    width: 100px;
+    height: 100px;
+    background-color: #3498db; /* Just to make the element visible */
+    margin-left: 50%;
+}
+
+@keyframes buffer {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
